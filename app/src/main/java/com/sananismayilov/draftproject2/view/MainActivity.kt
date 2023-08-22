@@ -10,6 +10,7 @@ import com.sananismayilov.draftproject2.R
 import com.sananismayilov.draftproject2.model.Person
 import com.sananismayilov.draftproject2.roomdb.PersonDao
 import com.sananismayilov.draftproject2.roomdb.PersonDatabase
+import com.sananismayilov.draftproject2.util.Util.DB_NAME
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Scheduler
 import io.reactivex.rxjava3.disposables.CompositeDisposable
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        personDatabase = Room.databaseBuilder(applicationContext,PersonDatabase::class.java,"Person")
+        personDatabase = Room.databaseBuilder(applicationContext,PersonDatabase::class.java,DB_NAME)
             .build()
 
         personDao = personDatabase.personDao()
