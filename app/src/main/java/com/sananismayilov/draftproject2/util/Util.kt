@@ -1,5 +1,5 @@
 package com.sananismayilov.draftproject2.util
 
 object Util {
-     val DB_NAME = "Person"
+     const val DB_NAME = "Person"
 }
